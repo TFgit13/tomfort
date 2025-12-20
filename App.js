@@ -11,6 +11,12 @@ import SplashScreen from './src/screens/SplashScreen';
 const Stack = createStackNavigator();
 
 export default function App() {
+    // Force title to Tomfort
+    React.useEffect(() => {
+        if (typeof document !== 'undefined') {
+            document.title = 'Tomfort';
+        }
+    }, []);
     // Font loading removed to prevent blocking
     // Icons will fallback or load asynchronously if handled by Expo
 
