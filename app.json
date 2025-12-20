@@ -23,15 +23,7 @@
       "edgeToEdgeEnabled": true
     },
     "web": {
-      "favicon": "./assets/logo.png",
-      "name": "Tomfort",
-      "shortName": "Tomfort",
-      "description": "Here for you, always.",
-      "display": "standalone",
-      "backgroundColor": "#ffffff",
-      "themeColor": "#ffffff",
-      "startUrl": "/tomfort/",
-      "scope": "/tomfort/"
+      "favicon": "./assets/logo.png"
     },
     "experiments": {
       "baseUrl": "/tomfort"
