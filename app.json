@@ -31,6 +31,9 @@
       "backgroundColor": "#ffffff",
       "themeColor": "#ffffff",
       "startUrl": "/"
+    },
+    "experiments": {
+      "baseUrl": "/tomfort"
     }
   }
 }

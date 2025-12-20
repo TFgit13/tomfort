@@ -27,23 +27,27 @@ export default function HomeScreen({ navigation }) {
                 contentContainerStyle={styles.scrollContent}
                 showsVerticalScrollIndicator={false}
             >
-                {cases.map((item) => (
-                    <TouchableOpacity
-                        key={item.id}
-                        style={[styles.card, item.span === 2 && styles.cardFull]}
-                        onPress={() => handlePress(item)}
-                        activeOpacity={0.9}
+                <TouchableOpacity
+                    key={item.id}
+                    style={[styles.card, item.span === 2 && styles.cardFull]}
+                    onPress={() => handlePress(item)}
+                    activeOpacity={0.9}
+                >
+                    <ImageBackground
+                        source={item.image}
+                        style={styles.image}
+                        imageStyle={{ borderRadius: 15 }}
+                        resizeMode="cover"
                     >
-                        <ImageBackground source={item.image} style={styles.image} imageStyle={{ borderRadius: 15 }}>
-                            <LinearGradient
-                                colors={['transparent', 'rgba(0,0,0,0.8)']}
-                                style={styles.gradient}
-                            >
-                                <Text style={styles.title}>{item.title}</Text>
-                                <Text style={styles.description}>{item.description}</Text>
-                            </LinearGradient>
-                        </ImageBackground>
-                    </TouchableOpacity>
+                        <LinearGradient
+                            colors={['transparent', 'rgba(0,0,0,0.8)']}
+                            style={styles.gradient}
+                        >
+                            <Text style={styles.title}>{item.title}</Text>
+                            <Text style={styles.description}>{item.description}</Text>
+                        </LinearGradient>
+                    </ImageBackground>
+                </TouchableOpacity>
                 ))}
             </ScrollView>
         </View>
@@ -80,8 +84,8 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
     },
     card: {
-        width: ITEM_WIDTH,
-        height: ITEM_WIDTH * 1.2,
+        width: '48%', // Responsive width
+        aspectRatio: 0.8, // Maintain aspect ratio
         marginBottom: 15,
         borderRadius: 15,
         shadowColor: '#000',
@@ -89,18 +93,19 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.1,
         shadowRadius: 4,
         elevation: 3,
+        overflow: 'hidden', // Clip content
     },
     cardFull: {
-        width: width - 40, // Full width minus padding
+        width: '100%', // Full width
     },
     image: {
         flex: 1,
         justifyContent: 'flex-end',
+        width: '100%',
+        height: '100%',
     },
     gradient: {
         padding: 15,
-        borderBottomLeftRadius: 15,
-        borderBottomRightRadius: 15,
         height: '50%',
         justifyContent: 'flex-end',
     },
