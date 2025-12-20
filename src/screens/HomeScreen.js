@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
         textAlign: 'right', // RTL
     },
     scrollContent: {
-        paddingHorizontal: 15,
+        paddingHorizontal: 10,
         paddingBottom: 20,
         flexDirection: 'row-reverse', // RTL Grid
         flexWrap: 'wrap',
@@ -85,20 +85,21 @@ const styles = StyleSheet.create({
     },
     card: {
         width: '48%', // Responsive width
-        aspectRatio: 0.8, // Maintain aspect ratio
-        marginBottom: 15,
-        borderRadius: 15,
+        aspectRatio: 1, // Square for smaller look
+        marginBottom: 10,
+        borderRadius: 12,
         backgroundColor: '#fff',
         shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2 },
+        shadowOffset: { width: 0, height: 1 },
         shadowOpacity: 0.1,
-        shadowRadius: 4,
-        elevation: 3,
+        shadowRadius: 3,
+        elevation: 2,
         overflow: 'hidden', // Clip content
         position: 'relative',
     },
     cardFull: {
         width: '100%', // Full width
+        aspectRatio: 2, // Wider for full cards
     },
     cardImage: {
         width: '100%',
@@ -112,20 +113,20 @@ const styles = StyleSheet.create({
         left: 0,
         right: 0,
         bottom: 0,
-        padding: 15,
-        height: '50%',
+        padding: 10,
+        height: '40%',
         justifyContent: 'flex-end',
     },
     title: {
         color: '#fff',
-        fontSize: 18,
+        fontSize: 16,
         fontWeight: 'bold',
-        marginBottom: 4,
+        marginBottom: 2,
         textAlign: 'right', // RTL
     },
     description: {
         color: 'rgba(255,255,255,0.9)',
-        fontSize: 12,
+        fontSize: 11,
         textAlign: 'right', // RTL
     },
 });
