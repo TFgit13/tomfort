@@ -6,9 +6,19 @@ import HomeScreen from './src/screens/HomeScreen';
 import CaseDetailScreen from './src/screens/CaseDetailScreen';
 import SplashScreen from './src/screens/SplashScreen';
 
+import { useFonts } from 'expo-font';
+import { Ionicons } from '@expo/vector-icons';
+
 const Stack = createStackNavigator();
 
 export default function App() {
+    const [fontsLoaded] = useFonts({
+        ...Ionicons.font,
+    });
+
+    if (!fontsLoaded) {
+        return null;
+    }
     const linking = {
         prefixes: ['https://TFgit13.github.io/tomfort', 'tomfort://'],
         config: {
