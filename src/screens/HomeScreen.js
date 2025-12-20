@@ -23,6 +23,7 @@ export default function HomeScreen({ navigation }) {
                 <Text style={styles.headerSubtitle}>מה עובר עלייך?</Text>
             </View>
             <ScrollView
+                style={{ flex: 1 }}
                 contentContainerStyle={styles.scrollContent}
                 showsVerticalScrollIndicator={false}
             >
