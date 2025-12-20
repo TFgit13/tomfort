@@ -30,7 +30,7 @@
       "display": "standalone",
       "backgroundColor": "#ffffff",
       "themeColor": "#ffffff",
-      "startUrl": "https://TFgit13.github.io/tomfort/",
+      "startUrl": "/tomfort/",
       "scope": "/tomfort/"
     },
     "experiments": {
