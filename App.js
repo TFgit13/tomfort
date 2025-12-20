@@ -9,19 +9,8 @@ import SplashScreen from './src/screens/SplashScreen';
 const Stack = createStackNavigator();
 
 export default function App() {
-    const linking = {
-        prefixes: ['https://TFgit13.github.io/tomfort', 'tomfort://'],
-        config: {
-            screens: {
-                Splash: '',
-                Home: 'home',
-                CaseDetail: 'case',
-            },
-        },
-    };
-
     return (
-        <NavigationContainer linking={linking} fallback={<React.Fragment />}>
+        <NavigationContainer>
             <StatusBar style="dark" />
             <Stack.Navigator
                 initialRouteName="Splash"
