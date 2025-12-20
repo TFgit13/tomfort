@@ -13,9 +13,9 @@ export default function App() {
         prefixes: ['https://TFgit13.github.io/tomfort', 'tomfort://'],
         config: {
             screens: {
-                Splash: '',
+                Splash: 'splash',
                 Home: 'home',
-                CaseDetail: 'case',
+                CaseDetail: 'case/:id',
             },
         },
     };
