@@ -18,11 +18,15 @@ export default function App() {
         prefixes: ['https://TFgit13.github.io/tomfort', 'tomfort://'],
         config: {
             screens: {
-                Splash: 'splash',
+                Splash: '',
                 Home: 'home',
                 CaseDetail: 'case/:id',
             },
         },
+        enabled: true,
+        documentTitle: {
+            enabled: false
+        }
     };
 
     return (
