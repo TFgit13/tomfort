@@ -2,6 +2,7 @@
   "name": "audio-app",
   "version": "1.0.0",
   "main": "index.js",
+  "homepage": "https://TFgit13.github.io/tomfort",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
