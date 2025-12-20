@@ -30,7 +30,7 @@
       "display": "standalone",
       "backgroundColor": "#ffffff",
       "themeColor": "#ffffff",
-      "startUrl": "/"
+      "startUrl": "/tomfort/"
     },
     "experiments": {
       "baseUrl": "/tomfort"
